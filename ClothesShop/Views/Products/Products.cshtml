@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="border" style="height:5000px">
+    <nav class="ms-3" aria-label="breadcrumb">
+        <ol class="breadcrumb" id="breadcrumb">
+            <li class="breadcrumb-item"><a href="~/Views/Home/Index.cshtml" id="homeLink">Home</a></li>
+            <!-- Section and Item will be dynamically added here -->
+        </ol>
+    </nav>
+    <div class="products border">
+        <div class="row">
+            <div class="intro-prod border col-6">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true">
+                            <img style="width:100px; margin: 0 5px" src="~/Images/Products/Product/8ts24a005-sn272-l-1-u.jpg" class="d-block active" alt="Slide 1" />
+                        </div>
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">
+                            <img style="width: 100px; margin: 0 5px" src="~/Images/Products/Product/8ts24a005-sg192-l-1-u.jpg" class="d-block" alt="Slide 2" />
+                        </div>
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2">
+                            <img style="width: 100px; margin: 0 5px" src="~/Images/Products/Product/8ts24a005-se068-1-u.jpg" class="d-block" alt="Slide 3" />
+                        </div>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/Images/Products/Product/8ts24a005-sn272-l-1-u.jpg" class="d-block w-100" alt="Slide 1" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Images/Products/Product/8ts24a005-sg192-l-1-u.jpg" class="d-block w-100" alt="Slide 2" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Images/Products/Product/8ts24a005-se068-1-u.jpg" class="d-block w-100" alt="Slide 3" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="info-prod border col-6">
+                <div class="product product-title">Áo phông nam cotton cổ tròn dáng suông</div>
+                <div class="products product-id">Mã sản phẩm: 8TS24A005</div>
+                <div class="product product-price fw-bold">149.000 đ</div>
+                <div class=""><a><img class="w-100" src="~/Images/Products/Product/desktop.jpg" /></a></div>
+                <div class="product product-color">
+                    <div>Mã sp: SG192</div>
+                    <div class="btn-color">
+                        <button style="width:30px;height:30px"></button>
+                        <button style="width:30px;height:30px"></button>
+                        <button style="width:30px;height:30px"></button>
+                        <button style="width:30px;height:30px"></button>
+                    </div>
+                </div>
+                <div class="product product-size">
+                    <div class="">
+                        <p class="">Kích cở:</p>
+                    </div>
+                    <div class="btn-size">
+                        <button style="width: 30px; height: 30px">S</button>
+                        <button style="width: 30px; height: 30px">M</button>
+                        <button style="width: 30px; height: 30px">L</button>
+                        <button style="width: 30px; height: 30px">XL</button>
+                    </div>
+                </div>
+                <div class="product product-btn d-flex">
+                    <div class="btn col-8">
+                        <button class="w-100">Thêm vào giỏ</button>
+                    </div>
+                    <div class="btn col-4">
+                        <button class="w-100">Tìm tại cửa hàng</button>
+                    </div>
+                </div>
+                <div class="product product-infomation">
+                    <div class="accordion-item bg-light border-top border-2 rounded-0">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Mô tả
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#sidebarAccordion">
+                            <div class="accordion-body">
+                                <p>Áo phông nam basic dáng regular cổ tròn.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-light border-top border-2 rounded-0">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Chất liệu
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#sidebarAccordion">
+                            <div class="accordion-body">
+                                <p>100% cotton</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-light border-top border-2 rounded-0">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Hướng dẫn sử dụng
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#sidebarAccordion">
+                            <div class="accordion-body">
+                                <p>
+                                    Giặt máy ở chế độ nhẹ, nhiệt độ thường.<br />
+                                    Không sử dụng hóa chất tẩy có chứa Clo.<br />
+                                    Phơi trong bóng mát.<br />
+                                    Sấy thùng, chế độ nhẹ nhàng.<br />
+                                    Là ở nhiệt độ trung bình 150 độ C.<br />
+                                    Giặt với sản phẩm cùng màu.<br />
+                                    Không là lên chi tiết trang trí.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
