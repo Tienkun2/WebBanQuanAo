@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CanifaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Clothes" Relationship="Self.FK__Clothes__Categor__4E88ABD4" FromRole="Category" ToRole="Clothes" />
+    <NavigationProperty Name="ClothingTypes" Relationship="Self.Category_ClothingType" FromRole="Category" ToRole="ClothingType" />
+  </EntityType>
+  <EntityType Name="Cloth">
+    <Key>
+      <PropertyRef Name="ClothesID" />
+    </Key>
+    <Property Name="ClothesID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClothesName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="PriceSale" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fabric" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserInstructions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedAt" Type="DateTime" Precision="3" />
+    <Property Name="CategoryID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClothingTypeID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClothingStyleID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <NavigationProperty Name="Category" Relationship="Self.FK__Clothes__Categor__4E88ABD4" FromRole="Clothes" ToRole="Category" />
+    <NavigationProperty Name="ClothingType" Relationship="Self.FK__Clothes__Clothin__4F7CD00D" FromRole="Clothes" ToRole="ClothingType" />
+    <NavigationProperty Name="ClothingStyle" Relationship="Self.FK__Clothes__Clothin__5070F446" FromRole="Clothes" ToRole="ClothingStyle" />
+    <NavigationProperty Name="Clothes_Color_Size" Relationship="Self.FK__Clothes_C__Cloth__534D60F1" FromRole="Clothes" ToRole="Clothes_Color_Size" />
+    <NavigationProperty Name="Images" Relationship="Self.FK__Image__ClothesID__59FA5E80" FromRole="Clothes" ToRole="Image" />
+  </EntityType>
+  <EntityType Name="Clothes_Color_Size">
+    <Key>
+      <PropertyRef Name="ClothesID" />
+      <PropertyRef Name="ColorID" />
+      <PropertyRef Name="SizeID" />
+    </Key>
+    <Property Name="ClothesID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ColorID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SizeID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cloth" Relationship="Self.FK__Clothes_C__Cloth__534D60F1" FromRole="Clothes_Color_Size" ToRole="Clothes" />
+    <NavigationProperty Name="Color" Relationship="Self.FK__Clothes_C__Color__5441852A" FromRole="Clothes_Color_Size" ToRole="Color" />
+    <NavigationProperty Name="Size" Relationship="Self.FK__Clothes_C__SizeI__5535A963" FromRole="Clothes_Color_Size" ToRole="Size" />
+  </EntityType>
+  <EntityType Name="ClothingStyle">
+    <Key>
+      <PropertyRef Name="ClothingStyleID" />
+    </Key>
+    <Property Name="ClothingStyleID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClothingStyleName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClothingTypeID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Clothes" Relationship="Self.FK__Clothes__Clothin__5070F446" FromRole="ClothingStyle" ToRole="Clothes" />
+    <NavigationProperty Name="ClothingType" Relationship="Self.FK__ClothingS__Cloth__3E52440B" FromRole="ClothingStyle" ToRole="ClothingType" />
+  </EntityType>
+  <EntityType Name="ClothingType">
+    <Key>
+      <PropertyRef Name="ClothingTypeID" />
+    </Key>
+    <Property Name="ClothingTypeID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClothingTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Clothes" Relationship="Self.FK__Clothes__Clothin__4F7CD00D" FromRole="ClothingType" ToRole="Clothes" />
+    <NavigationProperty Name="ClothingStyles" Relationship="Self.FK__ClothingS__Cloth__3E52440B" FromRole="ClothingType" ToRole="ClothingStyle" />
+    <NavigationProperty Name="Categories" Relationship="Self.Category_ClothingType" FromRole="ClothingType" ToRole="Category" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ColorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Clothes_Color_Size" Relationship="Self.FK__Clothes_C__Color__5441852A" FromRole="Color" ToRole="Clothes_Color_Size" />
+    <NavigationProperty Name="Images" Relationship="Self.FK__Image__ColorID__5AEE82B9" FromRole="Color" ToRole="Image" />
+  </EntityType>
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="ImageID" />
+    </Key>
+    <Property Name="ImageID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MainImage" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SecondaryImage1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SecondaryImage2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SecondaryImage3" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ClothesID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ColorID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Cloth" Relationship="Self.FK__Image__ClothesID__59FA5E80" FromRole="Image" ToRole="Clothes" />
+    <NavigationProperty Name="Color" Relationship="Self.FK__Image__ColorID__5AEE82B9" FromRole="Image" ToRole="Color" />
+  </EntityType>
+  <EntityType Name="Size">
+    <Key>
+      <PropertyRef Name="SizeID" />
+    </Key>
+    <Property Name="SizeID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SizeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Clothes_Color_Size" Relationship="Self.FK__Clothes_C__SizeI__5535A963" FromRole="Size" ToRole="Clothes_Color_Size" />
+  </EntityType>
+  <Association Name="FK__Clothes__Categor__4E88ABD4">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Clothes" Type="Self.Cloth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Clothes">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clothes__Clothin__4F7CD00D">
+    <End Role="ClothingType" Type="Self.ClothingType" Multiplicity="1" />
+    <End Role="Clothes" Type="Self.Cloth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClothingType">
+        <PropertyRef Name="ClothingTypeID" />
+      </Principal>
+      <Dependent Role="Clothes">
+        <PropertyRef Name="ClothingTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clothes__Clothin__5070F446">
+    <End Role="ClothingStyle" Type="Self.ClothingStyle" Multiplicity="1" />
+    <End Role="Clothes" Type="Self.Cloth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClothingStyle">
+        <PropertyRef Name="ClothingStyleID" />
+      </Principal>
+      <Dependent Role="Clothes">
+        <PropertyRef Name="ClothingStyleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clothes_C__Cloth__534D60F1">
+    <End Role="Clothes" Type="Self.Cloth" Multiplicity="1" />
+    <End Role="Clothes_Color_Size" Type="Self.Clothes_Color_Size" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clothes">
+        <PropertyRef Name="ClothesID" />
+      </Principal>
+      <Dependent Role="Clothes_Color_Size">
+        <PropertyRef Name="ClothesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Image__ClothesID__59FA5E80">
+    <End Role="Clothes" Type="Self.Cloth" Multiplicity="1" />
+    <End Role="Image" Type="Self.Image" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clothes">
+        <PropertyRef Name="ClothesID" />
+      </Principal>
+      <Dependent Role="Image">
+        <PropertyRef Name="ClothesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clothes_C__Color__5441852A">
+    <End Role="Color" Type="Self.Color" Multiplicity="1" />
+    <End Role="Clothes_Color_Size" Type="Self.Clothes_Color_Size" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="Clothes_Color_Size">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clothes_C__SizeI__5535A963">
+    <End Role="Size" Type="Self.Size" Multiplicity="1" />
+    <End Role="Clothes_Color_Size" Type="Self.Clothes_Color_Size" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Size">
+        <PropertyRef Name="SizeID" />
+      </Principal>
+      <Dependent Role="Clothes_Color_Size">
+        <PropertyRef Name="SizeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClothingS__Cloth__3E52440B">
+    <End Role="ClothingType" Type="Self.ClothingType" Multiplicity="1" />
+    <End Role="ClothingStyle" Type="Self.ClothingStyle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClothingType">
+        <PropertyRef Name="ClothingTypeID" />
+      </Principal>
+      <Dependent Role="ClothingStyle">
+        <PropertyRef Name="ClothingTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Image__ColorID__5AEE82B9">
+    <End Role="Color" Type="Self.Color" Multiplicity="1" />
+    <End Role="Image" Type="Self.Image" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="Image">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Category_ClothingType">
+    <End Role="Category" Type="Self.Category" Multiplicity="*" />
+    <End Role="ClothingType" Type="Self.ClothingType" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="CanifaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Clothes" EntityType="Self.Cloth" />
+    <EntitySet Name="Clothes_Color_Size" EntityType="Self.Clothes_Color_Size" />
+    <EntitySet Name="ClothingStyles" EntityType="Self.ClothingStyle" />
+    <EntitySet Name="ClothingTypes" EntityType="Self.ClothingType" />
+    <EntitySet Name="Colors" EntityType="Self.Color" />
+    <EntitySet Name="Images" EntityType="Self.Image" />
+    <EntitySet Name="Sizes" EntityType="Self.Size" />
+    <AssociationSet Name="FK__Clothes__Categor__4E88ABD4" Association="Self.FK__Clothes__Categor__4E88ABD4">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Clothes" EntitySet="Clothes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clothes__Clothin__4F7CD00D" Association="Self.FK__Clothes__Clothin__4F7CD00D">
+      <End Role="ClothingType" EntitySet="ClothingTypes" />
+      <End Role="Clothes" EntitySet="Clothes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clothes__Clothin__5070F446" Association="Self.FK__Clothes__Clothin__5070F446">
+      <End Role="ClothingStyle" EntitySet="ClothingStyles" />
+      <End Role="Clothes" EntitySet="Clothes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clothes_C__Cloth__534D60F1" Association="Self.FK__Clothes_C__Cloth__534D60F1">
+      <End Role="Clothes" EntitySet="Clothes" />
+      <End Role="Clothes_Color_Size" EntitySet="Clothes_Color_Size" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Image__ClothesID__59FA5E80" Association="Self.FK__Image__ClothesID__59FA5E80">
+      <End Role="Clothes" EntitySet="Clothes" />
+      <End Role="Image" EntitySet="Images" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clothes_C__Color__5441852A" Association="Self.FK__Clothes_C__Color__5441852A">
+      <End Role="Color" EntitySet="Colors" />
+      <End Role="Clothes_Color_Size" EntitySet="Clothes_Color_Size" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clothes_C__SizeI__5535A963" Association="Self.FK__Clothes_C__SizeI__5535A963">
+      <End Role="Size" EntitySet="Sizes" />
+      <End Role="Clothes_Color_Size" EntitySet="Clothes_Color_Size" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClothingS__Cloth__3E52440B" Association="Self.FK__ClothingS__Cloth__3E52440B">
+      <End Role="ClothingType" EntitySet="ClothingTypes" />
+      <End Role="ClothingStyle" EntitySet="ClothingStyles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Image__ColorID__5AEE82B9" Association="Self.FK__Image__ColorID__5AEE82B9">
+      <End Role="Color" EntitySet="Colors" />
+      <End Role="Image" EntitySet="Images" />
+    </AssociationSet>
+    <AssociationSet Name="Category_ClothingType" Association="Self.Category_ClothingType">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="ClothingType" EntitySet="ClothingTypes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

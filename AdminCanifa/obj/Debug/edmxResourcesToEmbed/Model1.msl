@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CanifaModelStoreContainer" CdmEntityContainer="CanifaEntities">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="CanifaModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clothes">
+      <EntityTypeMapping TypeName="CanifaModel.Cloth">
+        <MappingFragment StoreEntitySet="Clothes">
+          <ScalarProperty Name="ClothesID" ColumnName="ClothesID" />
+          <ScalarProperty Name="ClothesName" ColumnName="ClothesName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PriceSale" ColumnName="PriceSale" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Fabric" ColumnName="Fabric" />
+          <ScalarProperty Name="UserInstructions" ColumnName="UserInstructions" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ClothingTypeID" ColumnName="ClothingTypeID" />
+          <ScalarProperty Name="ClothingStyleID" ColumnName="ClothingStyleID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clothes_Color_Size">
+      <EntityTypeMapping TypeName="CanifaModel.Clothes_Color_Size">
+        <MappingFragment StoreEntitySet="Clothes_Color_Size">
+          <ScalarProperty Name="ClothesID" ColumnName="ClothesID" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClothingStyles">
+      <EntityTypeMapping TypeName="CanifaModel.ClothingStyle">
+        <MappingFragment StoreEntitySet="ClothingStyle">
+          <ScalarProperty Name="ClothingStyleID" ColumnName="ClothingStyleID" />
+          <ScalarProperty Name="ClothingStyleName" ColumnName="ClothingStyleName" />
+          <ScalarProperty Name="ClothingTypeID" ColumnName="ClothingTypeID" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClothingTypes">
+      <EntityTypeMapping TypeName="CanifaModel.ClothingType">
+        <MappingFragment StoreEntitySet="ClothingType">
+          <ScalarProperty Name="ClothingTypeID" ColumnName="ClothingTypeID" />
+          <ScalarProperty Name="ClothingTypeName" ColumnName="ClothingTypeName" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colors">
+      <EntityTypeMapping TypeName="CanifaModel.Color">
+        <MappingFragment StoreEntitySet="Color">
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Images">
+      <EntityTypeMapping TypeName="CanifaModel.Image">
+        <MappingFragment StoreEntitySet="Image">
+          <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="MainImage" ColumnName="MainImage" />
+          <ScalarProperty Name="SecondaryImage1" ColumnName="SecondaryImage1" />
+          <ScalarProperty Name="SecondaryImage2" ColumnName="SecondaryImage2" />
+          <ScalarProperty Name="SecondaryImage3" ColumnName="SecondaryImage3" />
+          <ScalarProperty Name="ClothesID" ColumnName="ClothesID" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sizes">
+      <EntityTypeMapping TypeName="CanifaModel.Size">
+        <MappingFragment StoreEntitySet="Size">
+          <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+          <ScalarProperty Name="SizeName" ColumnName="SizeName" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Category_ClothingType" TypeName="CanifaModel.Category_ClothingType" StoreEntitySet="Category_ClothingType">
+      <EndProperty Name="Category">
+        <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+      </EndProperty>
+      <EndProperty Name="ClothingType">
+        <ScalarProperty Name="ClothingTypeID" ColumnName="ClothingTypeID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

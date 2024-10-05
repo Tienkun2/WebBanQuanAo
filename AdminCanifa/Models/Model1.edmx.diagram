@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ce866565bfe04b2ea241496ed3e6639b" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="CanifaModel.Category" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanifaModel.Cloth" Width="1.5" PointX="7.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanifaModel.Clothes_Color_Size" Width="1.5" PointX="9.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanifaModel.ClothingStyle" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanifaModel.ClothingType" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanifaModel.Color" Width="1.5" PointX="7.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanifaModel.Image" Width="1.5" PointX="12.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanifaModel.Size" Width="1.5" PointX="7.5" PointY="12" IsExpanded="true" />
+        <AssociationConnector Association="CanifaModel.FK__Clothes__Categor__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="CanifaModel.FK__Clothes__Clothin__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="CanifaModel.FK__Clothes__Clothin__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="CanifaModel.FK__Clothes_C__Cloth__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="CanifaModel.FK__Image__ClothesID__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="CanifaModel.FK__Clothes_C__Color__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="CanifaModel.FK__Clothes_C__SizeI__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="CanifaModel.FK__ClothingS__Cloth__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="CanifaModel.FK__Image__ColorID__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="CanifaModel.Category_ClothingType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
