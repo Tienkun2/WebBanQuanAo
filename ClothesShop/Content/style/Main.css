@@ -19,8 +19,8 @@
     overflow:hidden;
 }
 .category-list {
+    overflow: hidden;
     display: flex;
-    overflow-x: auto;
     scroll-behavior: smooth;
     white-space: nowrap;
 }
