@@ -4,28 +4,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="border" style="height:5000px">
+<div class="container" style="height:5000px">
     <nav class="ms-3" aria-label="breadcrumb">
         <ol class="breadcrumb" id="breadcrumb">
             <li class="breadcrumb-item"><a href="~/Views/Home/Index.cshtml" id="homeLink">Home</a></li>
             <!-- Section and Item will be dynamically added here -->
         </ol>
     </nav>
-    <div class="products border">
+    <div class="products ">
         <div class="row">
-            <div class="intro-prod border col-6">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true">
-                            <img style="width:100px; margin: 0 5px" src="~/Images/Products/Product/8ts24a005-sn272-l-1-u.jpg" class="d-block active" alt="Slide 1" />
-                        </div>
-                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">
-                            <img style="width: 100px; margin: 0 5px" src="~/Images/Products/Product/8ts24a005-sg192-l-1-u.jpg" class="d-block" alt="Slide 2" />
-                        </div>
-                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2">
-                            <img style="width: 100px; margin: 0 5px" src="~/Images/Products/Product/8ts24a005-se068-1-u.jpg" class="d-block" alt="Slide 3" />
-                        </div>
-                    </div>
+            <div class="intro-prod col-6">
+                <div id="carouselExampleIndicators" class="carousel slide d-flex" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="~/Images/Products/Product/8ts24a005-sn272-l-1-u.jpg" class="d-block w-100" alt="Slide 1" />
@@ -36,18 +25,56 @@
                         <div class="carousel-item">
                             <img src="~/Images/Products/Product/8ts24a005-se068-1-u.jpg" class="d-block w-100" alt="Slide 3" />
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    <div style="margin-left: 20px">
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true">
+                            <img style="width:70px; margin-bottom: 5px" src="~/Images/Products/Product/8ts24a005-sn272-l-1-u.jpg" class="d-block active" alt="Slide 1" />
+                        </div>
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">
+                            <img style="width: 70px; margin-bottom:5px" src="~/Images/Products/Product/8ts24a005-sg192-l-1-u.jpg" class="d-block" alt="Slide 2" />
+                        </div>
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2">
+                            <img style="width: 70px; margin-bottom:5px" src="~/Images/Products/Product/8ts24a005-se068-1-u.jpg" class="d-block" alt="Slide 3" />
+                        </div>
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true">
+                            <img style="width:70px; margin-bottom: 5px" src="~/Images/Products/Product/8ts24a005-sn272-l-1-u.jpg" class="d-block active" alt="Slide 1" />
+                        </div>
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">
+                            <img style="width: 70px; margin-bottom:5px" src="~/Images/Products/Product/8ts24a005-sg192-l-1-u.jpg" class="d-block" alt="Slide 2" />
+                        </div>
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2">
+                            <img style="width: 70px; margin-bottom:5px" src="~/Images/Products/Product/8ts24a005-se068-1-u.jpg" class="d-block" alt="Slide 3" />
+                        </div>
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true">
+                            <img style="width:70px; margin-bottom: 5px" src="~/Images/Products/Product/8ts24a005-sn272-l-1-u.jpg" class="d-block active" alt="Slide 1" />
+                        </div>
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">
+                            <img style="width: 70px; margin-bottom:5px" src="~/Images/Products/Product/8ts24a005-sg192-l-1-u.jpg" class="d-block" alt="Slide 2" />
+                        </div>
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2">
+                            <img style="width: 70px; margin-bottom:5px" src="~/Images/Products/Product/8ts24a005-se068-1-u.jpg" class="d-block" alt="Slide 3" />
+                        </div>
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true">
+                            <img style="width:70px; margin-bottom: 5px" src="~/Images/Products/Product/8ts24a005-sn272-l-1-u.jpg" class="d-block active" alt="Slide 1" />
+                        </div>
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">
+                            <img style="width: 70px; margin-bottom:5px" src="~/Images/Products/Product/8ts24a005-sg192-l-1-u.jpg" class="d-block" alt="Slide 2" />
+                        </div>
+                        <div data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2">
+                            <img style="width: 70px; margin-bottom:5px" src="~/Images/Products/Product/8ts24a005-se068-1-u.jpg" class="d-block" alt="Slide 3" />
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="info-prod border col-6">
+            <div class="info-prod col-6">
                 <div class="product product-title">Áo phông nam cotton cổ tròn dáng suông</div>
                 <div class="products product-id">Mã sản phẩm: 8TS24A005</div>
                 <div class="product product-price fw-bold">149.000 đ</div>
@@ -126,7 +153,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

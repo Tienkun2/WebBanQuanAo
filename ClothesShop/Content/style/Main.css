@@ -1,0 +1,36 @@
+﻿.product-slide, product-info{
+    width:22%;
+}
+.product-item{
+    width:22%
+}
+.scroll-product .product-item{
+    width:40%;
+    padding:0 6px;
+}
+
+    .product a {
+        text-decoration: none;
+        color: black;
+    }
+
+.product-details{
+    white-space:nowrap;
+    overflow:hidden;
+}
+.category-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+.category-list div{
+    display: flex;
+    flex-direction:column;
+    align-items: center
+}
+.category img{
+    width:150px;
+    padding: 0 10px;
+    justify-content: center
+}
