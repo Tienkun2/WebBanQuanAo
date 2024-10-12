@@ -120,6 +120,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AllController.cs" />
+    <Compile Include="Controllers\BabyBoyController.cs" />
+    <Compile Include="Controllers\BabyGirlController.cs" />
     <Compile Include="Controllers\BoyController.cs" />
     <Compile Include="Controllers\GirlController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -207,6 +210,7 @@
     <Content Include="Images\Products\Product\desktop.jpg" />
     <Content Include="Images\Products\Product\8ts24a005-se068-1-u.jpg" />
     <Content Include="Images\Products\Product\8ts24a005-sg192-l-1-u.jpg" />
+    <Content Include="Images\Banner\SpMoi_cate_desktop-30Sep.jpg" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -232,10 +236,14 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\NewProducts\NewProducts.cshtml" />
-    <Content Include="Views\Products\Products.cshtml" />
-    <Content Include="Views\Girl\Girl.cshtml" />
-    <Content Include="Views\Boy\Boy.cshtml" />
+    <Content Include="Views\Girl\Index.cshtml" />
+    <Content Include="Views\NewProducts\Index.cshtml" />
+    <Content Include="Views\All\Index.cshtml" />
+    <Content Include="Views\Boy\Index.cshtml" />
+    <Content Include="Views\BabyBoy\Index.cshtml" />
+    <Content Include="Views\BabyGirl\Index.cshtml" />
+    <Content Include="Views\Girl\NewProd.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

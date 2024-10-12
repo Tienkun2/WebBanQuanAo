@@ -9,7 +9,7 @@ namespace ClothesShop.Controllers
     public class BoyController : Controller
     {
         // GET: Boy
-        public ActionResult Boy()
+        public ActionResult Index()
         {
             return View();
         }

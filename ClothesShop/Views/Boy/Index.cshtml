@@ -1,0 +1,210 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="height:2000px">
+    <div class="banner">
+        <img style="width:100%" src="https://placehold.co/2400x600" />
+    </div>
+    <div class="container" style="margin-top:100px">
+
+        @*Category*@
+
+        <div class="category d-flex align-items-center">
+            <div class="category-control-prev" type="button" id="prevBtn" data-bs-slide="prev">
+                <i id="prevBtn" style="font-size:30px; margin-right: 6px" class="bi bi-arrow-left-short" aria-hidden="true"></i>
+                <span class="visually-hidden">Previous</span>
+            </div>
+            <div class="category-list d-flex">
+                <div class="category-item">
+                    <img src="~/Images/Category/1-Ao-phong_nu_desktop.jpg" class="d-block" />
+                    <div class="text-uppercase">Áo phông</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/2-Bo-mac-nha_nu_desktop-03.jpg" class="d-block" />
+                    <div class="text-uppercase">Bộ mặc nhà</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/3-VAy-lien_nu_desktop.jpg" class="d-block" />
+                    <div class="text-uppercase">váy liền thân</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/4-Ao-kieu_nu_desktop_03.jpg" class="d-block" />
+                    <div class="text-uppercase">Áo kiểu</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/5-Ao-chong-nang_nu_desktop.jpg" class="d-block" />
+                    <div class="text-uppercase">Áo chống nắng</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/6-Quan-soc_nu_desktop.jpg" class="d-block" />
+                    <div class="text-uppercase">Quần soóc</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/7-Quan-jeans_nu_desktop.jpg" class="d-block" />
+                    <div class="text-uppercase">Quần Jean</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/8-Do-lot_nu_desktop.jpg" class="d-block" />
+                    <div class="text-uppercase">Đồ lót</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/9-Ao_nu_desktop.jpg" class="d-block" />
+                    <div class="text-uppercase">Áo</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/10-Quan_nu_desktop.jpg" class="d-block" />
+                    <div class="text-uppercase">Quần</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/11-VAy_nu_desktop.jpg" class="d-block" />
+                    <div class="text-uppercase">Váy</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/12-Do-mac-nha_nu_desktop.jpg" class="d-block" />
+                    <div class="text-uppercase">Đồ mặc nhà</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/13-Do-mac-ngoai_nu_desktop.jpg" class="d-block" />
+                    <div class="text-uppercase">Đồ mặc nữ</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/14-Phu-kien_nu_desktop.jpg" class="d-block" />
+                    <div class="text-uppercase">Phụ kiện</div>
+                </div>
+                <div class="category-item">
+                    <img src="~/Images/Category/15-Do-dung-cA-nhan_nu_desktop.jpg" class="d-block" />
+                    <div class="text-uppercase">Đồ dụng cá nhân</div>
+                </div>
+
+            </div>
+            <div class="category-control-prev" type="button" id="prevBtn" data-bs-slide="prev">
+                <i id="nextBtn" style="font-size:30px; margin-left: 6px" class="bi bi-arrow-right-short" aria-hidden="true"></i>
+                <span class="visually-hidden">Previous</span>
+            </div>
+
+        </div>
+        <div class="" style="border-top: 1px solid black; height:500px; margin-top:100px">
+            <div class="p-0">
+                <div class=" d-flex justify-content-between" style="margin-top:30px">
+                    <div class="text-uppercase"><h5>chào thu</h5></div>
+                    <div class="text-uppercase"><a>xem thêm>></a></div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="col-4">
+                        <img class="w-100" src="https://placehold.co/600x800" />
+                    </div>
+                    <div class="col-8">
+                        <div class="product d-flex position-relative" style="margin: 0 10px">
+                            <div class="navigation mt-2">
+                                <i class="bi bi-arrow-left-short position-absolute" id="prevBtnProd" style="font-size:30px; top:40%; left:20px"></i>
+                            </div>
+                            <div class="scroll-product d-flex overflow-hidden">
+                                <div class="product-item flex-shrink-0">
+                                    <img class="w-100" src="https://placehold.co/400x600" />
+                                    <div class="product-details">Áo sơ mi tay dài nam bamboo trơn dáng suông</div>
+                                    <div class="price">419.300đ</div>
+                                    <div class="discount"><span class="text-decoration-line-through">599.000đ</span> <span style="color:red">-30%</span></div>
+                                </div>
+                                <div class="product-item flex-shrink-0">
+                                    <img class="w-100" src="https://placehold.co/400x600" />
+                                    <div class="product-details">Áo sơ mi tay dài nam bamboo trơn dáng suông</div>
+                                    <div class="price">419.300đ</div>
+                                    <div class="discount"><span class="text-decoration-line-through">599.000đ</span> <span style="color:red">-30%</span></div>
+                                </div>
+                                <div class="product-item flex-shrink-0">
+                                    <img class="w-100" src="https://placehold.co/400x600" />
+                                    <div class="product-details">Áo sơ mi tay dài nam bamboo trơn dáng suông</div>
+                                    <div class="price">419.300đ</div>
+                                    <div class="discount"><span class="text-decoration-line-through">599.000đ</span> <span style="color:red">-30%</span></div>
+                                </div>
+                                <div class="product-item flex-shrink-0">
+                                    <img class="w-100" src="https://placehold.co/400x600" />
+                                    <div class="product-details">Áo sơ mi tay dài nam bamboo trơn dáng suông</div>
+                                    <div class="price">419.300đ</div>
+                                    <div class="discount"><span class="text-decoration-line-through">599.000đ</span> <span style="color:red">-30%</span></div>
+                                </div>
+                                <div class="product-item flex-shrink-0">
+                                    <img class="w-100" src="https://placehold.co/400x600" />
+                                    <div class="product-details">Áo sơ mi tay dài nam bamboo trơn dáng suông</div>
+                                    <div class="price">419.300đ</div>
+                                    <div class="discount"><span class="text-decoration-line-through">599.000đ</span> <span style="color:red">-30%</span></div>
+                                </div>
+                            </div>
+                            <div class="navigation mt-2">
+                                <i class="bi bi-arrow-right-short position-absolute" id="nextBtnProd" style="font-size:30px; top:40%; right:10px"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // CATEGORY
+        const scrollCategory = document.querySelector('.category-list');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        const cloneItemsCate = scrollCategory.innerHTML;
+        scrollCategory.innerHTML += cloneItemsCate;
+
+        nextBtn.addEventListener('click', () => {
+            scrollCategory.scrollBy({
+                left: 400, // Điều chỉnh theo chiều rộng item
+                behavior: 'smooth'
+            });
+            // Nếu cuộn đến cuối danh sách, quay về đầu (vòng lặp)
+            if (scrollCategory.scrollLeft + scrollCategory.clientWidth >= scrollCategory.scrollWidth) {
+                scrollCategory.scrollLeft = 0;
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            scrollCategory.scrollBy({
+                left: -400,
+                behavior: 'smooth'
+            });
+            // Nếu cuộn đến đầu danh sách, quay về cuối (vòng lặp)
+            if (scrollCategory.scrollLeft === 0) {
+                scrollCategory.scrollLeft = scrollCategory.scrollWidth / 2;
+            }
+        });
+
+        // PRODUCT
+        const scrollProduct = document.querySelector('.scroll-product');
+        const prevBtnProd = document.getElementById('prevBtnProd');
+        const nextBtnProd = document.getElementById('nextBtnProd');
+
+        const cloneItemsProd = scrollProduct.innerHTML;
+        scrollProduct.innerHTML += cloneItemsProd;
+
+        nextBtnProd.addEventListener('click', () => {
+            scrollProduct.scrollBy({
+                left: 350, // Điều chỉnh theo chiều rộng item
+                behavior: 'smooth'
+            });
+            // Nếu cuộn đến cuối danh sách, quay về đầu (vòng lặp)
+            if (scrollProduct.scrollLeft + scrollProduct.clientWidth >= scrollProduct.scrollWidth) {
+                scrollProduct.scrollLeft = 0;
+            }
+        });
+
+        prevBtnProd.addEventListener('click', () => {
+            scrollProduct.scrollBy({
+                left: -350,
+                behavior: 'smooth'
+            });
+            // Nếu cuộn đến đầu danh sách, quay về cuối (vòng lặp)
+            if (scrollProduct.scrollLeft === 0) {
+                scrollProduct.scrollLeft = scrollProduct.scrollWidth / 2;
+            }
+        });
+    </script>
+</div>
+
+
+

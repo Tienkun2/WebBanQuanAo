@@ -1,21 +1,22 @@
 ﻿
 @{
-    ViewBag.Title = "NewProducts";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container">
     <div class="row">
         <!-- Sidebar -->
+        <nav class="ms-3 w-100" aria-label="breadcrumb">
+            <ol class="breadcrumb" id="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" id="homeLink">Home</a></li>
+                <!-- Section and Item will be dynamically added here -->
+            </ol>
+        </nav>
         <div class="col-3 bg-light p-0">
-            <nav class="ms-3" aria-label="breadcrumb">
-                <ol class="breadcrumb" id="breadcrumb">
-                    <li class="breadcrumb-item"><a href="~/Views/Home/Index.cshtml" id="homeLink">Home</a></li>
-                    <!-- Section and Item will be dynamically added here -->
-                </ol>
-            </nav>
+
             <!-- Accordion 1 -->
-            <div class="overflow-auto sticky-top" style="height: 860px;">
+            <div class="overflow-hidden sticky-top" style="height: 860px;">
                 <div class="mb-5 ms-3 me-3">
                     <div class="accordion" id="sidebarAccordion">
                         <div class="accordion-item bg-light">
@@ -220,10 +221,10 @@
 
                     // Update breadcrumb
                     breadcrumb.innerHTML = `
-                                                        <li class="breadcrumb-item"><a href="#" id="homeLink">Home</a></li>
-                                                        <li class="breadcrumb-item"><a href="#" class="section-link">${section}</a></li>
-                                                        <li class="breadcrumb-item active" aria-current="page">${item}</li>
-                                                    `;
+                                                                <li class="breadcrumb-item"><a href="#" id="homeLink">Home</a></li>
+                                                                <li class="breadcrumb-item"><a href="#" class="section-link">${section}</a></li>
+                                                                <li class="breadcrumb-item active" aria-current="page">${item}</li>
+                                                            `;
 
                     // Add event listener to "section" breadcrumb link
                     const sectionLink = document.querySelector('.section-link');
@@ -275,5 +276,6 @@
         </div>
     </div>
 </div>
+
 
 
